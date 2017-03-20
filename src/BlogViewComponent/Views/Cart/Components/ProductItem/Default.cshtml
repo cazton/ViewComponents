@@ -1,0 +1,10 @@
+﻿@model BlogViewComponent.Core.Models.ProductItemModel
+
+<tr>
+    <td>
+        <img src="../images/@Model.ImageName-100.png" />
+        <label>@Model.Name</label>
+        <span>@Model.Description.Substring(0, 80)</span>
+    </td>
+    <td>$@Model.Price</td>
+</tr>

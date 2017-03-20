@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Client Side Calls";
+}
+
+<h2>Client Side Calls</h2>
+<div class="row">
+    <div class="col-md-12">
+        <div id="details"></div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $.get("@Url.Action("GetByClientSide", "Browser")",
+            function(details) {
+                $("#details").html("");
+                $("#details").html(details);
+            });
+    </script>
+}

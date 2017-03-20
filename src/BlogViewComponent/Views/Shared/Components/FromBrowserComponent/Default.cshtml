@@ -1,0 +1,13 @@
+﻿<h3>Invoke Example JavaScript Call</h3>
+<p>
+    Example of a View Component that get called from an MVC Controller method that is called from a javascript call
+</p>
+
+<pre>
+    <code>
+        public IActionResult GetByClientSide()
+        {
+            return ViewComponent(typeof(FromBrowserComponent));
+        }
+    </code>
+</pre>

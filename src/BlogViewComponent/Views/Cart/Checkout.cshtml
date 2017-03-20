@@ -1,0 +1,15 @@
+﻿@model int
+
+@{
+    ViewData["Title"] = "Product Items";
+}
+
+<h2>Checkout</h2>
+<div class="row">
+    <div class="col-md-9">
+        @await Component.InvokeAsync("CartItems", new { cartId = Model })
+    </div>
+    <div class="col-md-3">
+        @await Component.InvokeAsync("CartTotal", new { cartId = Model })
+    </div>
+</div>

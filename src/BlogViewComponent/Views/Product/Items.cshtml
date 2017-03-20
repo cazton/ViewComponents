@@ -1,0 +1,14 @@
+﻿@model IList<int>
+@{
+    ViewData["Title"] = "Product Items";
+}
+
+<h2>Product Items</h2>
+<div class="row">
+    @foreach (var itemId in Model)
+    {
+        <div class="col-md-4">
+            @await Component.InvokeAsync("ProductItem", new { productId = itemId })
+        </div>
+    }
+</div>

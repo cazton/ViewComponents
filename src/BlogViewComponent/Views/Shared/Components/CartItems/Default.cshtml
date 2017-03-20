@@ -1,0 +1,17 @@
+﻿@model IList<int>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product Info</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var id in Model)
+        {
+            @await Component.InvokeAsync("ProductItem", new { productId = id })
+        }
+    </tbody>
+</table>

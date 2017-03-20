@@ -1,0 +1,23 @@
+﻿<h3>Invoke Example Parameters</h3>
+<p>
+    Example of a View Component that is overloading the Invoke method and taking parameters being passed in
+</p>
+
+<pre>
+    <code>
+        &#64;await Component.InvokeAsync("InvokeExample4", new { id = 4 })
+    </code>
+</pre>
+
+<pre>
+    <code>
+        public class InvokeExample4ViewComponent : ViewComponent
+        {
+            public IViewComponentResult Invoke(int id, bool isNew)
+            {
+                return isNew ? View("WithParametersLatest") : View("WithParameters");
+            }
+        }
+    
+    </code>
+</pre>

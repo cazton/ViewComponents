@@ -1,0 +1,16 @@
+﻿<h3>Invoke Example Async</h3>
+<p>
+    Example of a View Component that uses the InvokeAsync method
+</p>
+
+<pre>
+    <code>
+        public class InvokeExample1ViewComponent : ViewComponent
+        {
+            public async Task&lt;IViewComponentResult&gt; InvokeAsync()
+            {
+                return await Task.FromResult(View());
+            }
+        }
+    </code>
+</pre>
